@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef Name="GenAvali_AugsHediff" Abstract="True">
+		<defaultLabelColor>(1, 0.52, 0.05)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GenAvali_Bio</defName>
+		<label>Avali Bio</label>
+		<description>Avali Biology</description>
+		<hediffClass>GenAvali_Hediff_Biology</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
+		<isBad>false</isBad>
+		<initialSeverity>0.001</initialSeverity>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		
+			<stages>
+				<li>
+					<capMods>
+						<li>
+							<capacity>Sight</capacity>
+							<offset>0</offset>
+						</li>
+						<li>
+							<capacity>Hearing</capacity>
+							<offset>1.0</offset>
+						</li>
+					</capMods>
+					<becomeVisible>false</becomeVisible>
+				</li>
+				<li>
+					<minSeverity>0.25</minSeverity>
+					<capMods>
+						<li>
+							<capacity>Sight</capacity>
+							<offset>-0.25</offset>
+						</li>
+						<li>
+							<capacity>Hearing</capacity>
+							<offset>1.0</offset>
+						</li>
+					</capMods>
+					<becomeVisible>false</becomeVisible>
+				</li>
+				<li> 
+					<minSeverity>0.5</minSeverity>
+					<capMods>
+						<li>
+							<capacity>Sight</capacity>
+							<offset>-0.5</offset>
+						</li>
+						<li>
+							<capacity>Hearing</capacity>
+							<offset>1.0</offset>
+						</li>
+					</capMods>			
+					<restFallFactorOffset>1.0</restFallFactorOffset>
+					<statOffsets>
+						<RestRateMultiplier>3.0</RestRateMultiplier>
+					</statOffsets>
+					<becomeVisible>false</becomeVisible>
+				</li>
+			</stages>
+	</HediffDef>
+
+  <!-- AvaliBasicLiveSupport -->
+	<HediffDef  ParentName="GenAvali_AugsHediff">
+		<defName>GenAvali_BasicLifeSupport</defName>
+		<label>basic thermoregulation and life support system</label>
+		<description>All spacefaring Avali augmented with basic thermoregulation and life support system so they will not suffocate or boil alive immediately after landing on most planets. This system not designed to work in very harsh conditions without additional equipment or augments.</description>
+		<scenarioCanAdd>true</scenarioCanAdd>
+			<stages>
+				<li>
+					<statOffsets>
+						<ComfyTemperatureMax>35</ComfyTemperatureMax>
+					</statOffsets>
+					<becomeVisible>true</becomeVisible>
+				</li>
+			</stages>
+	</HediffDef>
+</Defs>

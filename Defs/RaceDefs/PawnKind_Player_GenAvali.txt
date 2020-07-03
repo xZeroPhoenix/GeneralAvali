@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<PawnKindDef ParentName="AvaliPawnKindBase">
+	<defName>Gen_Avali</defName>
+	<label>Colonist</label>
+	<defaultFactionType>GenAvali_PlayerFact</defaultFactionType>
+  <backstoryCategories>
+    <li>GenAvali_Basic</li>
+  </backstoryCategories>
+	<isFighter>false</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<forceNormalGearQuality>true</forceNormalGearQuality>
+	<!--apparelTags>
+		<li>GenAvali_Officer</li>
+		<li>GenAvali_Science</li>
+		<li>GenAvali_Traditional</li>
+	</apparelTags-->
+	<apparelMoney>500~1800</apparelMoney>
+</PawnKindDef>
+</Defs>

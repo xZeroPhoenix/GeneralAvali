@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <TabAvaliPack>Pack</TabAvaliPack>
+  <PackSpecialization>Specialization:</PackSpecialization>
+  <PackSpecializationDesc>Packs tends to become specialized towards certain tasks which becomes their role in a tribe. Pack role may change over time.</PackSpecializationDesc>
+  <PackLeader>Pack leader:</PackLeader>
+  <PackLeaderDesc>The most skilled pack members will became pack leaders. Pack leader is not constant and may change over time if in leader's pack joins somebody with highter skills or some of pack members skills became highter then leader skills.</PackLeaderDesc>
+  <PackMembers>Pack members:</PackMembers>
+  <PackEffects>Pack activity effects:</PackEffects>
+  <PackEffectsDesc>Colonost skills will be improved for each packmate in range of {0} (based on Hearing).</PackEffectsDesc>
+  <NotInPack>{0} doesn't consists in any pack.</NotInPack>
+</LanguageData>
