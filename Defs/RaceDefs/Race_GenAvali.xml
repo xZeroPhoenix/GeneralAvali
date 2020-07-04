@@ -394,4 +394,38 @@
 
     </alienRace>
 </AlienRace.ThingDef_AlienRace>
+<!--For those who like this kinda stuff-->
+<rjw.RaceGroupDef>
+
+	<defName>GenAvali</defName>
+	<raceNames>
+		<li>Avali</li>
+	</raceNames>
+
+	<anuses>
+		<li>CloacalAnus</li>
+	</anuses>
+		
+	<femaleBreasts>
+		<li>FeaturelessChest</li>
+	</femaleBreasts>
+		
+	<femaleGenitals>
+		<li>CloacalVagina</li>
+	</femaleGenitals>
+		
+	<maleBreasts>
+		<li>FeaturelessChest</li>
+	</maleBreasts>
+		
+	<maleGenitals>
+		<li>CloacalPenis</li>
+	</maleGenitals>
+		
+	<tags>
+		<li>Feathers</li>
+	</tags>
+	
+</rjw.RaceGroupDef>
+<!-- If this makes you uncomfortable. You can safely remove this if you'd like to. I'm sorry but some people are a bit more mature.-->
 </Defs>
