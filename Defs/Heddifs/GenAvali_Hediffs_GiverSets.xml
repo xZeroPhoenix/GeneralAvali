@@ -4,12 +4,12 @@
     <defName>OrganicAvali</defName>
     <hediffGivers>
       <!-- Racial-->
-      <li Class="GenAvali.HediffGiver_AddHediff">
-        <hediff>AvaliBiology</hediff>
+      <li Class="HediffGiver_AddHediff">
+        <hediff>GenAvali_Bio</hediff>
       </li>
       
-      <li Class="GenAvali.HediffGiver_AddHediff">
-        <hediff>AvaliBasicLiveSupport</hediff>
+      <li Class="HediffGiver_AddHediff">
+        <hediff>GenAvali_BasicLS</hediff>
       </li>
       
       <!-- Environmental -->

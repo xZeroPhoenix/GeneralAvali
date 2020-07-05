@@ -70,9 +70,9 @@
 
   <!-- AvaliBasicLiveSupport -->
 	<HediffDef  ParentName="GenAvali_AugsHediff">
-		<defName>GenAvali_BasicLifeSupport</defName>
-		<label>basic thermoregulation and life support system</label>
-		<description>All spacefaring Avali augmented with basic thermoregulation and life support system so they will not suffocate or boil alive immediately after landing on most planets. This system not designed to work in very harsh conditions without additional equipment or augments.</description>
+		<defName>GenAvali_BasicLS</defName>
+		<label>A basic thermoregulation and life support system</label>
+		<description>All spacefaring Avali are augmented with basic thermoregulation and life support system so they will not suffocate or boil alive immediately after landing on most planets. This system not designed to work in very harsh conditions without additional equipment or augments.</description>
 		<scenarioCanAdd>true</scenarioCanAdd>
 			<stages>
 				<li>

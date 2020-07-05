@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Settlers-->
+<Defs>
+
+	<AlienRaces.BackstoryDef ParentName="GA_ADLT">
+		<defName>GenAvali_TraditionalSettler</defName>
+		<titleShort>Settler</titleShort>
+		<title>Settler from a new pack.</title>
+		<baseDescription>[PAWN_nameDef] is a settler looking to make a new colony.</baseDescription>
+		<spawnCatergories>
+			<li>GA_Trad</li>
+		</spawnCatergories>
+		<skillGains>
+			<li>
+				<defNames>Social</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Plants</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Construction</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Mining</defNames>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+	</AlienRaces.BackstoryDef>
+
+	<AlienRaces.BackstoryDef ParentName="GA_ADLT">
+		<defName>GenAvali_ScientificSettler</defName>
+		<titleShort>Settler</titleShort>
+		<title>Settler from a new pack.</title>
+		<baseDescription>[PAWN_nameDef] is a settler looking to make a new colony.</baseDescription>
+		<spawnCatergories>
+			<li>GA_Sci</li>
+		</spawnCatergories>
+		<skillGains>
+			<li>
+				<defNames>Intellectual</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Plants</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Construction</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Mining</defNames>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+	</AlienRaces.BackstoryDef>
+
+	<AlienRaces.BackstoryDef ParentName="GA_ADLT">
+		<defName>GenAvali_MilitaristicSettler</defName>
+		<titleShort>Settler</titleShort>
+		<title>Settler from a new pack.</title>
+		<baseDescription>[PAWN_nameDef] is a settler looking to make a new colony.</baseDescription>
+		<spawnCatergories>
+			<li>GenAvali_Milit</li>
+		</spawnCatergories>
+		<skillGains>
+			<li>
+				<defNames>Shooting</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Melee</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Plants</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Construction</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Mining</defNames>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+	</AlienRaces.BackstoryDef>
+
+	<!--Slaves-->
+	<AlienRaces.BackstoryDef ParentName="GA_ADLT">
+		<defName>GA_Slaves</defName>
+		<titleShort>Slave</titleShort>
+		<title>Labor Slave</title>
+		<baseDescription>[PAWN_nameDef] is/was a slave. [PAWN_objective] been subject to a few forms of deprivation. [PAWN_objective] was enslaved for laborous uses.</baseDescription>
+		<spawnCatergories>
+			<li>Gen_AvaliSlave</li>
+		</spawnCatergories>
+		<skillGains>
+			<li>
+				<defNames>Social</defNames>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defNames>Intellectual</defNames>
+				<amount>-1</amount>
+			</li>
+			<li>
+				<defNames>Shooting</defNames>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defNames>Melee</defNames>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defNames>Construction</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Mining</defNames>
+				<amount>6</amount>
+			</li>
+		</skillGains>
+	</AlienRaces.BackstoryDef>
+
+	<AlienRaces.BackstoryDef ParentName="GA_ADLT">
+		<defName>GenAvali_ExoticSlave</defName>
+		<titleShort>Slave</titleShort>
+		<title>Exotic Slave</title>
+		<baseDescription>[PAWN_nameDef] is/was a slave. [PAWN_objective] were enslaved for [PAWN_objective] looks or entertainment values.</baseDescription>
+		<spawnCatergories>
+			<li>GA_Slaves</li>
+		</spawnCatergories>
+		<skillGains>
+			<li>
+				<defNames>Social</defNames>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defNames>Shooting</defNames>
+				<amount>-4</amount>
+			</li>
+			<li>
+				<defNames>Melee</defNames>
+				<amount>-4</amount>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<li>
+				<defname>Beauty</defname>
+				<degree>2</degree>
+				<chance>75</chance>
+			</li>
+		</forcedTraits>
+	</AlienRaces.BackstoryDef>
+
+	<AlienRaces.BackstoryDef ParentName="GA_ADLT">
+		<defName>GenAvali_Refugee1</defName>
+		<titleShort>Refugee</titleShort>
+		<title>Survival Refugee</title>
+		<baseDescription>[PAWN_nameDef] survived a transport ship crash. [PAWN_pronoun] isn't open to talking about [PAWN_objective] past.</baseDescription>
+		<spawnCatergories>
+			<li>GA_Refu</li>
+		</spawnCatergories>
+		<skillGains>
+			<li>
+				<defNames>Social</defNames>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defNames>Shooting</defNames>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defNames>Melee</defNames>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defNames>Construction</defNames>
+				<amount>6</amount>
+			</li>
+			<li>
+				<defNames>Mining</defNames>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+	</AlienRaces.BackstoryDef>
+
+	<AlienRaces.BackstoryDef ParentName="GA_ADLT">
+		<defName>GenAvali_Refugee2</defName>
+		<titleShort>Refugee</titleShort>
+		<title>Survival Refugee</title>
+		<baseDescription>[PAWN_nameDef] survived on their own for quite some time. [PAWN_pronoun] can't remember seem to[PAWN_objective] past.</baseDescription>
+		<spawnCatergories>
+			<li>GA_Refu</li>
+		</spawnCatergories>
+		<skillGains>
+			<li>
+				<defNames>Social</defNames>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defNames>Shooting</defNames>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defNames>Melee</defNames>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defNames>Construction</defNames>
+				<amount>6</amount>
+			</li>
+			<li>
+				<defNames>Mining</defNames>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+	</AlienRaces.BackstoryDef>
+
+</Defs>

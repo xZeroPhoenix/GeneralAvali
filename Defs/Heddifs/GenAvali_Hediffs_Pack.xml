@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <HediffDef Name="GenAvali_Pack" Abstract="True">
+  <HediffDef Name="Avali_Pack" Abstract="True">
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(255, 255, 255)</defaultLabelColor>
     <initialSeverity>0.001</initialSeverity>
@@ -10,8 +10,8 @@
   </HediffDef>
   
   <!-- AvaliPackExploration -->
-  <HediffDef ParentName="GenAvali_Pack">
-    <defName>GenAvali_Pack_Exploration</defName>
+  <HediffDef ParentName="Avali_Pack">
+    <defName>Avali_Pack_Exploration</defName>
     <label>Exploratory pack</label>
     <description>These Avali are always happy to explore, thus keeping true to their nomadic ways.</description>
     <stages>
@@ -185,8 +185,8 @@
   </HediffDef>
   
   <!-- AvaliPackMilitary -->
-  <HediffDef ParentName="GenAvali_Pack">
-    <defName>GenAvali_Pack_Officer</defName>
+  <HediffDef ParentName="Avali_Pack">
+    <defName>Avali_Pack_Officer</defName>
     <label>Militant Pack</label>
     <description>These Avali have taken a favor to uses of force.</description>
     <stages>
@@ -298,8 +298,8 @@
   </HediffDef>
   
   <!-- AvaliPackHunting -->
-  <HediffDef ParentName="GenAvali_Pack">
-    <defName>GenAvali_Pack_Hunting</defName>
+  <HediffDef ParentName="Avali_Pack">
+    <defName>Avali_Pack_Hunting</defName>
     <label>Hunting Pack</label>
     <description>These Avali love to hunt together.</description>
     <stages>
@@ -440,8 +440,8 @@
   </HediffDef>
   
   <!-- AvaliPackScientific -->
-  <HediffDef ParentName="GenAvali_Pack">
-    <defName>GenAvali_Pack_Scientific</defName>
+  <HediffDef ParentName="Avali_Pack">
+    <defName>Avali_Pack_Scientific</defName>
     <label>Intelectual Pack</label>
     <description>These Avali have a keen eye to scientific methods.</description>
     <stages>
@@ -552,8 +552,8 @@
   </HediffDef>
   
   <!-- AvaliPackIndustrial -->
-  <HediffDef ParentName="GenAvali_Pack">
-    <defName>GenAvali_Pack_Industrial</defName>
+  <HediffDef ParentName="Avali_Pack">
+    <defName>Avali_Pack_Industrial</defName>
     <label>Industrious Pack</label>
     <description>These blue collared Avali love manual labor.</description>
     <stages>
@@ -669,8 +669,8 @@
   </HediffDef>
   
   <!-- AvaliPackArtistical -->
-  <HediffDef ParentName="GenAvali_Pack">
-    <defName>GenAvali_Pack_Artistic</defName>
+  <HediffDef ParentName="Avali_Pack">
+    <defName>Avali_Pack_Artistic</defName>
     <label>Artisan pack</label>
     <description>These Avali view themsevles as artisans of all trades.</description>
     <stages>

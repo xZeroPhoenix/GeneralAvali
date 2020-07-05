@@ -10,7 +10,7 @@
 <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
     <defName>GenAvali</defName>
     <label>Avali</label>
-    <description>A small nomadic spacefaring race of feathered raptors from the frozen planet of Avalon. Reigning from either scientific, traditional, or authoritorian pack ideologies.</description>
+    <description>A small nomadic spacefaring race of feathered raptors from the frozen planet of Avalon. Reigning from either scientific, traditional, or militaristic pack ideologies.</description>
     <alienRace>
         <generalSettings>
 		
@@ -240,21 +240,53 @@
         </hairSettings>
 		
         <pawnKindSettings>
+		
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>GenAvali_Slaves</li>
+					</kindDefs>
+					<chance>100</chance>
+				</li>
+			</alienslavekinds>
+
 			<startingColonists>
 			  <li>
 				<pawnKindEntries>
 				  <li>
 					<kindDefs>
-					  <li>Avali</li>
+					  <li>GA_Sci</li>
 					</kindDefs>
-					<chance>100</chance>
+					<chance>33.33</chance>
+				  </li>
+				  <li>
+					<kindDefs>
+					  <li>GenAvali_Milit</li>
+					</kindDefs>
+					<chance>33.33</chance>
+				  </li>
+				  <li>
+					<kindDefs>
+					  <li>GenAvali_Trad</li>
+					</kindDefs>
+					<chance>33.33</chance>
 				  </li>
 				</pawnKindEntries>
 				<factionDefs>
-				  <li>AvaliPlayerColony</li> 
+				  <li>GenAvali_Player</li> 
 				</factionDefs>
 			  </li>
 			</startingColonists>
+
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>GenAvali_Refu</li>
+					</kindDefs>
+					<chance>100</chance>
+				</li>
+			</alienrefugeekinds>
+			
         </pawnKindSettings>
 		
         <thoughtSettings>

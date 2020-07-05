@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+<ThingDef Abstract="True" Name="GA_ADLT">
+    <slot>Adulthood</slot>
+    
+    <skillGains>
+
+    </skillGains>
+
+    <forcedHediff>
+        <li>GenAvali_Bio</li>
+    </forcedHediff>
+
+    <forcedItems>
+        <GenAvali_BasicLifeSupport>1</GenAvali_BasicLifeSupport>
+    </forcedItems>
+
+    <bioAgeRange>
+        <min>18</min>
+        <max>21</max>
+    </bioAgeRange>
+    <chronoAgeRange>
+        <min>18</min>
+    </chronoAgeRange>
+</ThingDef>
+
+</Defs>
