@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+		<!--Needed for the packmate system.-->
+		<ThingDef Name="GenAvali_PawnBase" ParentName="BasePawn" Abstract="True">
+				<inspectorTabs>
+						<li>Avali.ITab_Avali_Pack</li>
+				</inspectorTabs>
+		</ThingDef>
+
+		<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+			<defName>GenAvali</defName>
+			<label>Avali</label>
+			<description>A small nomadic spacefaring race of feathered raptors from the frozen planet of Avalon. Reigning from either scientific, traditional, or militaristic pack ideologies.</description>
+			<alienRace>
+				<generalSettings>
+				
+					<maleGenderProbability>0.5</maleGenderProbability>
+					<immuneToAge>false</immuneToAge>
+					<canLayDown>true</canLayDown>
+					<allowHumanBios>true</allowHumanBios>
+					<ImmuneToXenophobia>false</ImmuneToXenophobia>
+					<minAgeForAdulthood>20</minAgeForAdulthood>
+					<humanRecipeImport>true</humanRecipeImport>
+					
+			Chemical Settings <!--TODO: Determine what drugs might kill an Avali on ingestion, chocolate apperently.-->
+						<chemicalSettings>
+							<li>
+							</li>
+						</chemicalSettings>
+						
+			<!--Race traits Settings--> 
+						<forcedRaceTraitEntries>
+							<li>
+								<defname>Bisexual</defname><!--Avali do _everything_ together-->
+								<chance>30</chance><!--In theory they should feel just fine hooking up with others of the same sex-->
+							</li>
+							<li>
+								<defname>FastSleeper</defname><!--Avali sleep often and quickly, rimworld doesn't let me make them sleep more often so this will have to do for now.-->
+								<chance>25</chance><!--Or, atleast I don't know how to make them sleep more often yet. This might change in the future.-->
+							</li>
+							<li>
+								<defname>Xenophobic</defname><!--Avali had been at war within their own race for quite some time,-->
+								<chance>30</chance><!--So it would make sense that they would hate others just as much.-->
+							</li>
+						</forcedRaceTraitEntries>				
+						<disallowedTraits>
+							<li>Pyromaniac</li><!--Avali are deathly alergic to fire.-->
+						</disallowedTraits>	
+						<notXenophobistTowards>
+						<li>Avali</li>
+						</notXenophobistTowards>
+			<!--Race Color stuff-->
+						<useSkincolorForHair>true</useSkincolorForHair>
+						<alienPartGenerator>
+							
+							<useGenderedHeads>true</useGenderedHeads>
+							<useGenderedBodies>true</useGenderedBodies>
+							<useSkincolorForHair>true</useSkincolorForHair>
+							<customDrawSize>(0.6, 0.6)</customDrawSize>
+							<customHeadDrawSize>(0.6, 0.6)</customHeadDrawSize>
+							<customPortraitHeadDrawSize>(1, 1)</customPortraitHeadDrawSize>
+							
+							<alienbodytypes>
+								<li>Thin</li>
+							</alienbodytypes>
+						
+							<alienskincolorgen Class="ColorGenerator_Options"><!--This color stuff scares me.-->
+						
+								<options>
+							
+									<li>
+										<weight>10</weight>
+										<only>RGBA(1.0,1.0,1.0,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.7,0.6,0.6,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.5,0.3,0.0,1)</only>
+									</li>
+								
+								</options>
+							
+							</alienskincolorgen>
+							
+							<alienskinsecondcolorgen Class="ColorGenerator_Options">
+						
+								<options>
+							
+									<li>
+										<weight>10</weight>
+										<only>RGBA(1.0,1.0,1.0,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.7,0.6,0.6,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.5,0.3,0.0,1)</only>
+									</li>
+								
+								</options>
+							
+							</alienskinsecondcolorgen>
+							
+							<alienhaircolorgen Class="ColorGenerator_Options">
+						
+								<options>
+							
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.51,0.77,0.86,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.70,0.65,0.82,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.61,0.75,0.91,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.79,0.86,0.96,1)</only>
+									</li>
+								
+								</options>
+							
+							</alienhaircolorgen>
+							
+							<alienhairsecondcolorgen Class="ColorGenerator_Options">
+						
+								<options>
+							
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.51,0.77,0.86,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.70,0.65,0.82,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.61,0.75,0.91,1)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.79,0.86,0.96,1)</only>
+									</li>
+								
+								</options>
+							
+							</alienhairsecondcolorgen><!--That color stuff scared me.-->
+						
+							<bodyAddons>
+								<li><!--Avali Ear Top Right-->
+									<path>Textures/GenAvali_PawnBase/Ears/TR</path>
+									<bodyPart>EarTopRight</bodyPart>
+									<inFrontOfBody>false</inFrontOfBody>
+									<layerInvert>true</layerInvert>
+									<drawnInBed>true</drawnInBed>
+									<colorChannel>hair</colorChannel>
+										<hediffGraphics>
+											<BionicEarTR>Textures/GenAvali_PawnBase/Ears/BiTR</BionicEarTR>
+											<ProstEarTR>Textures/GenAvali_PawnBase/Ears/PrTR</ProstEarTR>
+										</hediffGraphics>
+									<shaderType>CutoutComplex</shaderType>
+									<hiddenUnderApparelTag>
+										<li>GenAvali_Apparel_Hood</li>
+									</hiddenUnderApparelTag>
+								</li>
+								<li><!--Avali Ear Top Left-->
+									<path>Textures/GenAvali_PawnBase/Ears/TL</path>
+									<bodyPart>EarTopLeft</bodyPart>
+									<inFrontOfBody>false</inFrontOfBody>
+									<layerInvert>true</layerInvert>
+									<drawnInBed>true</drawnInBed>
+									<colorChannel>hair</colorChannel>
+										<hediffGraphics>
+											<BionicEarTL>Textures/GenAvali_PawnBase/Ears/BiTL</BionicEarTL>
+											<ProstEarTL>Textures/GenAvali_PawnBase/Ears/PrTL</ProstEarTL>
+										</hediffGraphics>
+									<shaderType>CutoutComplex</shaderType>
+									<hiddenUnderApparelTag>
+										<li>GenAvali_Apparel_Hood</li>
+									</hiddenUnderApparelTag>
+								</li>
+								<li><!--Avali Ear Bottom Right-->
+									<path>Textures/GenAvali_PawnBase/Ears/BR</path>
+									<bodyPart>EarBotRight</bodyPart>
+									<inFrontOfBody>false</inFrontOfBody>
+									<layerInvert>true</layerInvert>
+									<drawnInBed>true</drawnInBed>
+									<colorChannel>hair</colorChannel>
+										<hediffGraphics>
+											<BionicEarBR>Textures/GenAvali_PawnBase/Ears/BiBR</BionicEarBR>
+											<ProstEarBR>Textures/GenAvali_PawnBase/Ears/PrBR</ProstEarBR>
+										</hediffGraphics>
+									<shaderType>CutoutComplex</shaderType>
+									<hiddenUnderApparelTag>
+										<li>GenAvali_Apparel_Hood</li>
+									</hiddenUnderApparelTag>
+								</li>
+								<li><!--Avali Ear Bottom Left-->
+									<path>Textures/GenAvali_PawnBase/Ears/BL</path>
+									<bodyPart>EarBotLeft</bodyPart>
+									<inFrontOfBody>false</inFrontOfBody>
+									<layerInvert>true</layerInvert>
+									<drawnInBed>true</drawnInBed>
+									<colorChannel>hair</colorChannel>
+										<hediffGraphics>
+											<BionicEarBL>Textures/GenAvali_PawnBase/Ears/BiBL</BionicEarBL>
+											<ProstEarBL>Textures/GenAvali_PawnBase/Ears/PrBL</ProstEarBL>
+										</hediffGraphics>
+									<shaderType>CutoutComplex</shaderType>
+									<hiddenUnderApparelTag>
+										<li>GenAvali_Apparel_Hood</li>
+									</hiddenUnderApparelTag>
+								</li>
+							</bodyAddons>
+									
+						</alienPartGenerator>
+				</generalSettings>
+				<graphicPaths>
+					
+					<li>
+						<body>Textures/GenAvali_PawnBase/Bodies/</body>
+						<head>Textures/GenAvali_PawnBase/Heads/</head>
+						<skeleton>Textures/GenAvali_PawnBase/Remains/</skeleton>
+						<skull>Textures/GenAvali_PawnBase/Skull</skull>
+					</li>
+					
+				</graphicPaths>
+				<hairSettings>
+				</hairSettings>
+				
+				<pawnKindSettings>
+				
+					<alienslavekinds>
+						<li>
+							<kindDefs>
+								<li>GenAvali_Slaves</li>
+							</kindDefs>
+							<chance>100</chance>
+						</li>
+					</alienslavekinds>
+
+					<startingColonists>
+					  <li>
+						<pawnKindEntries>
+						  <li>
+							<kindDefs>
+							  <li>GA_Sci</li>
+							</kindDefs>
+							<chance>33.33</chance>
+						  </li>
+						  <li>
+							<kindDefs>
+							  <li>GenAvali_Milit</li>
+							</kindDefs>
+							<chance>33.33</chance>
+						  </li>
+						  <li>
+							<kindDefs>
+							  <li>GenAvali_Trad</li>
+							</kindDefs>
+							<chance>33.33</chance>
+						  </li>
+						</pawnKindEntries>
+						<factionDefs>
+						  <li>GenAvali_Player</li> 
+						</factionDefs>
+					  </li>
+					</startingColonists>
+
+					<alienrefugeekinds>
+						<li>
+							<kindDefs>
+								<li>GenAvali_Refu</li>
+							</kindDefs>
+							<chance>100</chance>
+						</li>
+					</alienrefugeekinds>
+					
+				</pawnKindSettings>
+				
+				<thoughtSettings>
+				</thoughtSettings>
+				<relationSettings>
+				
+					<relationChanceModifierLover>1</relationChanceModifierLover>
+					<relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+					<relationChanceModifierFiance>1</relationChanceModifierFiance>
+					<relationChanceModifierSpouse>1</relationChanceModifierSpouse>
+					<relationChanceModifierExSpouse>1</relationChanceModifierExSpouse>
+
+					<relationChanceModifierParent>1</relationChanceModifierParent>
+					<relationChanceModifierChild>1</relationChanceModifierChild>
+					<relationChanceModifierSibling>1</relationChanceModifierSibling>
+					
+				</relationSettings>
+				<raceRestriction>
+				
+					<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+					<onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+					<onlyDoRaceRestrictedRecipes>false</onlyDoRaceRestrictedRecipes>
+					<onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits>
+					<onlyEatRaceRestrictedFood>false</onlyEatRaceRestrictedFood>
+					
+					<researchList>
+						<li>
+							<projects>
+								<li>GenAvali_NexusComputing</li><!--Avali advanced research center for late game.-->
+								<li>GenAvali_40mmRailSling</li><!--Avali railgun assisted weaponry.-->
+								<li>GenAvali_NeuralLink</li><!--Avali Cybernetics-->
+								<li>GenAvali_NexusIFF</li><!--Avali turrets-->
+								<li>GenAvali_BasicClothing</li><!--Self explanitory-->
+								<li>GenAvali_RoyalClothing</li><!--Noble and diplomatic clothing-->
+								<li>GenAvali_LifeSupport</li><!--Life Support rebreathers; hardware, clothing-->
+								<li>GenAvali_LifeSupportII</li><!--Life Support augments; nanites, internal-->
+								<li>GenAvali_ArmorI</li><!--Basic armor; Nanoweave kevlaresq armor-->
+								<li>GenAvali_ArmorII</li><!--Balistic combat armor; Tac Vests, ceramic plate based armor-->
+								<li>GenAvali_ArmorIII</li><!--Exoskeleton bases; Worker, Cargo, Improvised Armor attachments-->
+								<li>GenAvali_ArmorIV</li><!--Purpose built exoskeletons; Medic, Soldier, Recon-->
+							</projects>
+						</li>
+					</researchList>
+					
+					<apparelList>
+						<!--Basic Clothing-->
+						<li>GenAvali_Apparel_Robe</li>
+						<li>GenAvali_Apparel_Sleeves</li>
+						<li>GenAvali_Apparel_ArmCovers</li>
+						<li>GenAvali_Apparel_SleevesLoose</li>
+						<li>GenAvali_Apparel_Shirt</li>
+						<li>GenAvali_Apparel_Undershirt</li>
+						<li>GenAvali_Apparel_Leotard</li>
+						<li>GenAvali_Apparel_Skirt</li>
+						<li>GenAvali_Apparel_Dress</li>
+						<li>GenAvali_Apparel_Wrap</li>
+						<li>GenAvali_Apparel_Scarf</li>
+						<li>GenAvali_Apparel_Visor</li>
+						<li>GenAvali_Apparel_Hat</li>
+						<li>GenAvali_Apparel_EarRings</li>
+						<li>GenAvali_Apparel_EarWraps</li>
+						<li>GenAvali_Apparel_Hood</li>
+						<!--Royal Clothing-->
+						<li>GenAvali_Apparel_Diplomat</li><!--Flowy-->
+						<li>GenAvali_Apparel_DiplomatOfficer</li><!--Squared-->
+						<li>GenAvali_Apparel_DiplomatScientist</li><!--Mostly white-->
+						<li>GenAvali_Apparel_PackLeader</li><!--Flowy-->
+						<li>GenAvali_Apparel_PackLeaderOfficer</li><!--Squared-->
+						<li>GenAvali_Apparel_PackLeaderScientist</li><!--Mostly white, material accents-->
+						<li>GenAvali_Apparel_Royalty</li><!--Mostly material, purple accents-->
+						<li>GenAvali_Apparel_RoyaltyHumanic</li><!--Now it has frills-->
+						<!--Life Support I-->
+						<li>GenAvali_Apparel_LifeSupportMask</li>
+						<li>GenAvali_Apparel_LifeSupportHelmet</li>
+						<li>GenAvali_Apparel_LifeSupportMouthpeice</li>
+						<!--Armor I-->
+						<li>GenAvali_Apparel_KevlarVest</li>
+						<li>GenAvali_Apparel_KevlarLeg</li>
+						<li>GenAvali_Apparel_KevlarGroin</li>
+						<li>GenAvali_Apparel_KevlarSkirt</li>
+						<li>GenAvali_Apparel_KevlarWrap</li>
+						<li>GenAvali_Apparel_KevlarLeotard</li>
+						<li>GenAvali_Apparel_KevlarUndershirt</li>
+						<li>GenAvali_Apparel_KevlarSleeves</li>
+						<li>GenAvali_Apparel_KevlarHelm</li>
+						<!--Armor II-->
+						<li>GenAvali_Apparel_PlateVest</li>
+						<li>GenAvali_Apparel_PlateLeg</li>
+						<li>GenAvali_Apparel_PlateGroin</li>
+						<li>GenAvali_Apparel_PlateSkirt</li>
+						<li>GenAvali_Apparel_PlateHelm</li>
+						<!--Armor III-->
+						<li>GenAvali_Apparel_ExoBase</li>
+						<li>GenAvali_Apparel_ExoCargo</li>
+						<li>GenAvali_Apparel_ExoWorker</li>
+						<li>GenAvali_Apparel_ExoKevlarArmor</li>
+						<li>GenAvali_Apparel_ExoPlateArmor</li>
+						<!--Armor IV-->
+						<li>GenAvali_Apparel_ExoMedic</li>
+						<li>GenAvali_Apparel_ExoRecon</li>
+						<li>GenAvali_Apparel_ExoHeavy</li>
+					<!--AmmunitionModSupport, will remove once I have coded in my own custom ammo support.-->
+						<li>Apparel_AmmoPackPrimitiveLarge</li>
+						<li>Apparel_AmmoPackIndustrialLarge</li>
+						<li>Apparel_AmmoPackChargeLarge</li>
+						<li>Apparel_AmmoPackBombLarge</li>
+						<li>Apparel_AmmoPackPrimitiveMassive</li>
+						<li>Apparel_AmmoPackIndustrialMassive</li>
+						<li>Apparel_AmmoPackChargeMassive</li>
+						<li>Apparel_AmmoPackBombMassive</li>
+						<li>Apparel_AmmoPackPrimitiveMedium</li>
+						<li>Apparel_AmmoPackIndustrialMedium</li>
+						<li>Apparel_AmmoPackChargeMedium</li>
+						<li>Apparel_AmmoPackBombMedium</li>
+						<li>Apparel_AmmoPackPrimitiveSmall</li>
+						<li>Apparel_AmmoPackIndustrialSmall</li>
+						<li>Apparel_AmmoPackChargeSmall</li>
+						<li>Apparel_AmmoPackBombSmall</li>
+					<!--AmmunitionModSupport, will remove once I have coded in my own custom ammo support.-->
+					</apparelList>
+					
+					<buildingList>
+						<li>GenAvali_Furn_NexusResearchBench</li>
+						<li>GenAvali_Furn_Bed</li>
+						<li>GenAvali_Furn_Pillow</li>
+						<li>GenAvali_Furn_Window</li>
+						<li>GenAvali_Furn_TV</li>
+						<li>GenAvali_Furn_VirtualRoom</li>
+						<li>GenAvali_Furn_Turr_40basic</li>
+						<li>GenAvali_Furn_Turr_40advanced</li>
+						<li>GenAvali_Furn_Turr_misslebasic</li>
+						<li>GenAvali_Furn_Turr_missileadvanced</li>
+					</buildingList>
+					<onlyBuildRaceRestrictedBuildings>true</onlyBuildRaceRestrictedBuildings>
+				</raceRestriction>
+
+			</alienRace>
+		</AlienRace.ThingDef_AlienRace>
+<!--Oreo-Zero This part may have to be moved to it's own xml in Defs\RaceSupport, Hopefully not I would prefer if it stayed here.-->
+	<!--For those who like this kinda stuff-->
+		<rjw.RaceGroupDef>
+				<defName>GenAvali</defName>
+				
+						<raceNames>
+								<li>Avali</li>
+						</raceNames>
+						
+						<anuses>
+								<li>CloacalAnus</li>
+						</anuses>
+						
+						<femaleBreasts>
+								<li>FeaturelessChest</li><!--No boobs here-->
+						</femaleBreasts>
+						
+						<femaleGenitals>
+								<li>CloacalVagina</li>
+						</femaleGenitals>
+						
+						<maleBreasts>
+								<li>FeaturelessChest</li>
+						</maleBreasts>
+						
+						<maleGenitals>
+								<li>CloacalPenis</li>
+						</maleGenitals>
+						
+						<tags>
+								<li>Feathers</li>
+						</tags>
+		</rjw.RaceGroupDef>
+	<!-- If this makes you uncomfortable. You can safely remove this if you'd like to. I'm sorry but some people are a bit more mature.-->
+</Defs>
