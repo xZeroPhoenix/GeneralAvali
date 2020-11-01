@@ -79,20 +79,16 @@ This whole section will have to be added in later once we start implimenting fac
 																								<max>RGBA(1, 1, 1, 1)</max><!--A splash of everything, to prevent this from overpowering the rest of the more set in stone colors this is weighted less likely.-->
 																						</li>
 																						<li>
-																								<weight>5</weight>
+																								<weight>5</weight><!--This should hopefully be pastel colors-->
 																								<min>RGBA(0.75, 0.75, 0.70, 1.0)</min>
 																								<max>RGBA(1.0, 0.95, 0.75, 1.0)</max>
 																						</li>
 																						<li>
-																								<weight>5</weight>
-																								<min>RGBA(0.75, 0.75, 0.70, 1.0)</min>
-																								<max>RGBA(1.0, 0.95, 0.75, 1.0)</max>
+																								<weight>5</weight><!--Nearly pure white underfluff.-->
+																								<only>RGBA(0.95, 0.95, 0.95, 1.0)</only>
 																						</li>
-																						<li>
-																								<weight>5</weight>
-																								<min>RGBA(0.75, 0.75, 0.70, 1.0)</min>
-																								<max>RGBA(1.0, 0.95, 0.75, 1.0)</max>
-																						</li>
+																				</options>
+																		</first>
 								</generalSettings>
 						<graphicPaths>
 
