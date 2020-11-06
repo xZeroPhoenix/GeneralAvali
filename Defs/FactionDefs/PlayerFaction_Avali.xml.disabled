@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+      <FactionDef>
+        
+            <defName>AvaliPlayerFaction</defName>
+            <isPlayer>true</isPlayer>
+            <label>Avali colony</label>
+            <description>A colony of Avali.</description>
+
+        <backstoryFilters>
+          <li>
+            <categories>
+              <li>Tribal</li>
+            </categories>
+            <commonality>0.95</commonality>
+          </li>
+        </backstoryFilters>
+        
+           <factionIconPath>Textures/Temp_Icon</factionIconPath>
+           <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        
+           <colorSpectrum>
+              <li>(0, 0, 0)</li>
+           </colorSpectrum>
+
+           <techLevel>Spacer</techLevel>
+           <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+           <factionNameMaker>NamerFactionTribal</factionNameMaker>
+           <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+        
+           <basicMemberKind>Avali_Colonist</basicMemberKind>
+           <pawnSingular>colonist</pawnSingular>
+           <pawnsPlural>colonists</pawnsPlural>
+
+           <startingTechprintsResearchTags>
+                   <li>ClassicStart</li>
+                   <li>ClassicStartTechprints</li>
+           </startingTechprintsResearchTags>
+        
+        <hairTags>
+          <li>Tribal</li>
+        </hairTags>
+        <recipePrerequisiteTags>
+          <li>Tribal</li>
+        </recipePrerequisiteTags>
+        
+      </FactionDef>
+          
+</Defs>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  
+      <!-- Base -->
+  
+     <PawnKindDef Name="AvaliFactionBase" Abstract="True">
+       <race>GenAvali</race>
+       <defaultFactionType>AvaliPlayer</defaultFactionType>
+
+       <backstoryCategories>
+         <li>Outlander</li>
+         <li>Tribal</li>
+       </backstoryCategories>
+       <maxGenerationAge>60</maxGenerationAge>
+       <chemicalAddictionChance>0.01</chemicalAddictionChance>
+       <invNutrition>4</invNutrition>
+       <invFoodDef>Pemmican</invFoodDef>
+       <forceNormalGearQuality>true</forceNormalGearQuality>
+       <combatPower>45</combatPower>
+     </PawnKindDef>
+
+     <!-- Player -->
+  
+    <PawnKindDef ParentName="AvaliFactionBase">
+       <defName>Avali_Pawn</defName>
+       <label>Avali Colonist</label>
+       <race>GenAvali</race>
+
+
+      <combatPower>45</combatPower>
+      <isFighter>true</isFighter>
+      <gearHealthRange>0.5~1.8</gearHealthRange>
+      <chemicalAddictionChance>0.04</chemicalAddictionChance>
+      <invNutrition>1</invNutrition>
+      <itemQuality>Normal</itemQuality>
+      <apparelMoney>
+        <min>0</min>
+        <max>1000</max>
+      </apparelMoney>
+      <weaponMoney>
+        <min>900</min>
+        <max>1200</max>
+      </weaponMoney>
+      <weaponTags>
+        <li>MedievalMeleeAdvanced</li>
+        <li>MedievalMeleeDecent</li>
+        <li>MedievalMeleeBasic</li>
+        <li>NeolithicRangedHeavy</li>
+        <li>NeolithicRangedChief</li>
+      </weaponTags>
+      <apparelTags>
+        <li>Medieval</li>
+        <li>Neolithic</li>
+      </apparelTags>
+      <techHediffsMoney>
+        <min>50</min>
+        <max>50</max>
+      </techHediffsMoney>
+      <techHediffsTags>
+        <li>Poor</li>
+      </techHediffsTags>
+      <techHediffsChance>0.15</techHediffsChance>
+      <factionLeader>true</factionLeader>
+      <apparelRequired>
+      </apparelRequired>
+    </PawnKindDef>
+
+  
+     <!-- Settlements -->
+  
+  
+     <!-- Pirates -->
+  
+</Defs>

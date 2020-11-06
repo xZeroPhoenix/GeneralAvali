@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+      <li>
+           <FactionDef>
+             
+             
+                <defName>AvaliFaction</defName>
+
+                <!-- Names and Description -->
+
+                <label>Placeholder_Faction_Name</label>
+             
+                <description>Placeholder_Faction_Description</description>
+             
+                <pawnSingular>Avali</pawnSingular>
+                <pawnsPlural>Avali</pawnsPlural>
+             
+                <leaderTitle>Placeholder_LeaderTitle</leaderTitle>
+
+                <factionNameMaker>AvaliFaction_NamerMaker</factionNameMaker>
+                <settlementNameMaker>AvaliSettlement_NameMaker</settlementNameMaker>
+
+                <!-- World Generation Factors --> 
+             
+                <settlementGenerationWeight>0.2</settlementGenerationWeight>
+                <requiredCountAtGameStart>1</requiredCountAtGameStart>
+                <maxCountAtGameStart>1</maxCountAtGameStart>
+                <canMakeRandomly>true</canMakeRandomly>
+
+                <!-- Player Relations and Attack Characteristics -->
+  
+                <canSiege>true</canSiege>
+                <canStageAttacks>true</canStageAttacks>
+                <permanentEnemy>false</permanentEnemy>
+                <autoFlee>true</autoFlee>
+             
+                <startingGoodwill>-10~10</startingGoodwill>
+                <naturalColonyGoodwill>-50~50</naturalColonyGoodwill>
+
+                <!-- Icon and "colors" -->             
+             
+                <factionIconPath>Things/CAIcon</factionIconPath>
+             
+                <colorSpectrum>
+                  <li>(255, 255, 255)</li>
+                </colorSpectrum>
+             
+                <!-- Tech Level and Backstory Categories -->
+             
+
+                <techLevel>Spacer</techLevel>
+
+                    <backstoryCategories>
+                <!-- <li>Outlander</li> -->
+                    </backstoryCategories>
+             
+                <!-- I do not know what this does -->
+                <geneticVariance>0.9</geneticVariance>
+
+                <!-- Hair Tags (might not be applicable) -->
+             
+                <hairTags>
+                  <!-- <li>Urban</li> -->
+                </hairTags>
+
+                 <!-- Presumably the difficulty -->
+             
+                <maxPawnCostPerTotalPointsCurve>
+                   <points>
+                     <li>(0,35)</li>
+                     <li>(70, 50)</li>
+                     <li>(700, 100)</li>
+                     <li>(1300, 150)</li>
+                     <li>(100000, 10000)</li>
+                   </points>
+                </maxPawnCostPerTotalPointsCurve>
+
+                <!-- Allowed Arrival Temperature Range -->
+             
+               <allowedArrivalTemperatureRange>
+                    <min>-55</min>
+                    <max>55</max>
+               </allowedArrivalTemperatureRange>
+
+             <!-- Raid Generation Weightings(?) -->
+               <pawnGroupMakers>
+                   <li>
+                     
+                     <kindDef>Combat</kindDef>
+                     
+                  <options>
+              <!--    <Contractor_Rifleman>10</Contractor_Rifleman>
+                      <Contractor_Medic>1</Contractor_Medic>
+                      <Contractor_Marksman>1</Contractor_Marksman>
+                      <Contractor_Assault>7</Contractor_Assault>
+                      <Contractor_Officer>3</Contractor_Officer>
+                      <Contractor_Gunner>5</Contractor_Gunner>
+                      <Contractor_Explosives>0.5</Contractor_Explosives>
+                      <Contract_Militia>10</Contract_Militia> -->
+                 </options>
+                     
+               </li>
+
+                 <!-- Settlement Defense Generation Weightings(?) -->
+                   <li>
+                     
+                      <kindDef>Settlement</kindDef>
+                     
+                   <options>
+                <!--  <Contractor_Rifleman>10</Contractor_Rifleman>
+                      <Contractor_Medic>1</Contractor_Medic>
+                      <Contractor_Marksman>1</Contractor_Marksman>
+                      <Contractor_Assault>7</Contractor_Assault>
+                      <Contractor_Officer>3</Contractor_Officer>
+                      <Contractor_Gunner>5</Contractor_Gunner>
+                      <Contractor_Explosives>0.5</Contractor_Explosives>
+                      <Contract_Militia>10</Contract_Militia> -->
+                   </options>
+                     
+               </li>
+             </pawnGroupMakers>
+             
+             </FactionDef>
+      </li>
+</Defs>
+

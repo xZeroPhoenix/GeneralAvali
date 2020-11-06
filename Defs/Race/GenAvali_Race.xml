@@ -1,11 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 
 		<!--Needed for the packmate system.-->
-		<ThingDef Name="GenAvali_PawnBase" ParentName="BasePawn" Abstract="True">
+  <!--<ThingDef Name="GenAvali_PawnBase" ParentName="BasePawn" Abstract="True">
 				<inspectorTabs>
 						<li>Avali.ITab_Avali_Pack</li>
 				</inspectorTabs>
-		</ThingDef>
+		</ThingDef> -->
 		
 		
 		<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
@@ -14,59 +16,71 @@
 			<description>A small nomadic spacefaring race of feathered raptors from the frozen planet of Avalon. Reigning from either scientific, traditional, or militaristic pack ideologies.</description>
 					<alienRace>
 								<generalSettings>
-										<chemicalSettings>
+                  <!-- I can not get this to work, it just throws up errors -->
+                  <!--   <chemicalSettings>
 												<li>
 														<chemical>Chocolate</chemical>
 														<reactions>
 																<li Class="IngestionOutcomeDoer_GiveHediff">
-																		<hediff>FoodPoisoning</hediff>
+																	  <hediff>FoodPoisoning</hediff>
 																		<severity>0.5</severity>
 																</li>
 														</reactions>
 												</li>
-										</chemicalSettings>
+										</chemicalSettings> -->
+                      
 										<forcedRaceTraitEntries>
 												<li>
 														<defName>Bisexual</defName>
 														<chance>30</chance>
 												</li>
-												<li>
+
+                      <!-- FastSleeper throws up errors, I have no Idea why -->
+                      
+                      <!--		<li>
 														<defName>FastSleeper</defName>
 														<chance>25</chance>
-												</li>
-												<li>
+												</li> -->
+                      
+                      <!-- Xenophobic throws up errors, I have no Idea why -->
+                      
+                      <!--	<li>
 														<defName>Xenophobic</defName>
 														<chance>30</chance>
-												</li>
+												</li> -->
+                      
 										</forcedRaceTraitEntries>
-										<disallowedTraits>
+               <!-- I can not get this to work, it just throws up errors -->
+               <!-- <disallowedTraits>
 											<li>Pyromaniac</li>
 										</disallowedTraits>
+                  
 										<notXenophobistTowards>
-											<li>Avali</li>
-										</notXenophobistTowards>
-										<!--<factionRelations>
-This whole section will have to be added in later once we start implimenting factions.
+											<li>GenAvali</li>
+										</notXenophobistTowards> -->
+                  
+										<!--<factionRelations> This whole section will have to be added in later once we start implimenting factions.
 												<li>
 													<factions>
 													</factions>
 													<goodwill>
 													</goodwill>
 												</li>
-										</factionRelations>-->
-										<allowHumanBios>true</allowHumanBios><!--This will stay on until we make up enough non human bios to not need this one anymore.-->
+										</factionRelations> -->
+										<allowHumanBios>true</allowHumanBios><!--This will stay on until we make up enough non human bios to not need this one anymore. I'd say something like 20 bios would be a good kick off point, but i'd like to hit atleast 30.-->
 										<minAgeForAdulthood>18</minAgeForAdulthood>
 										<humanRecipeImport>true</humanRecipeImport>
 										<alienPartGenerator>
 												<alienbodytypes>
-														<li>Normal</li>
 														<li>Thin</li>
 												</alienbodytypes>
 												<useGenderedHeads>true</useGenderedHeads>
 												<useGenderedBodies>true</useGenderedBodies>
+												<!--Keep this off until we have the spites done to see if the avali look cuter when made a bit smaller than humans.
 												<customDrawSize>(0.75, 0.75)</customDrawSize>
 												<customHeadDrawSize>(0.75, 0.75)</customHeadDrawSize>
-												<headOffset>(1.0, 1.0)</headOffset> <!-- This one is trial and error to find what looks the best.-->
+												-->
+												<headOffset>(0.0, 0.0)</headOffset><!-- This one is trial and error to find what looks the best.-->
 												
 														<colorChannels><!--Very Scary color generation.-->
 																<li>
@@ -79,36 +93,79 @@ This whole section will have to be added in later once we start implimenting fac
 																								<max>RGBA(1, 1, 1, 1)</max><!--A splash of everything, to prevent this from overpowering the rest of the more set in stone colors this is weighted less likely.-->
 																						</li>
 																						<li>
-																								<weight>5</weight>
+																								<weight>5</weight><!--This should hopefully be pastel colors-->
 																								<min>RGBA(0.75, 0.75, 0.70, 1.0)</min>
 																								<max>RGBA(1.0, 0.95, 0.75, 1.0)</max>
 																						</li>
 																						<li>
-																								<weight>5</weight>
-																								<min>RGBA(0.75, 0.75, 0.70, 1.0)</min>
-																								<max>RGBA(1.0, 0.95, 0.75, 1.0)</max>
+																								<weight>5</weight><!--Nearly pure white underfluff.-->
+																								<only>RGBA(0.95, 0.95, 0.95, 1.0)</only>
 																						</li>
 																						<li>
-																								<weight>5</weight>
-																								<min>RGBA(0.75, 0.75, 0.70, 1.0)</min>
-																								<max>RGBA(1.0, 0.95, 0.75, 1.0)</max>
+																								<weight>5</weight><!--Grey and other dark underfluffs. This may be too dark, can lighten it up later.-->
+																								<min>RGBA(0.05, 0.05, 0.05, 1.0)</min>
+																								<max>RGBA(0.10, 0.10, 0.10, 1.0)</max>
 																						</li>
+																				</options>
+																		</first>
+																		<second Class="ColorGenerator_Options">
+																				<options>
+																						<li>
+																									<weight>5</weight><!--Lets hope that letting them have almost any color works if not I may toss in pastels at a lower rate and even some other colors I see from images online.-->
+																									<min>RGBA(0, 0, 0, 1)</min>
+																									<max>RGBA(1, 1, 1, 1)</max>
+																						</li>
+																				</options>
+																		</second>
+																</li>
+														</colorChannels>
+														
+														<bodyAddons>
+																<li>
+																		<path>Textures/GenAvali_PAWN/Tails/</path>
+																		<bodyPart>Tail</bodyPart>
+                                    <inFrontOfBody>false</inFrontOfBody>
+																		<layerOffset>0.00</layerOffset>
+																		<angle>0</angle>
+																		<drawSize>(1.0, 1.0)</drawSize>
+																		<drawnInBed>false</drawnInBed>
+																		<colorChannel>skin</colorChannel>
+																				<!--Keeping This turned off until we get to that point.
+																				<hediffGraphics>
+																					<ProstClothTail>Textures/GenAvali_PAWN/Tails/ProstCloth</ProstClothTail>
+																					<ProstWoodTail>Textures/GenAvali_PAWN/Tails/ProstWood</ProstWoodTail>
+																					<AugTail>Textures/GenAvali_PAWN/Tails/AugTail</AugTail>
+																				</hediffGraphics>
+																				-->
+																</li>
+														</bodyAddons>
+                      </alienPartGenerator>
 								</generalSettings>
-						<graphicPaths>
-
-						</graphicPaths>
+								<graphicPaths>
+										<li>
+												<body>Textures/GenAvali_PAWN/bodies</body>
+												<head>Textures/GenAvali_PAWN/heads</head>
+												<skeleton>Textures/GenAvali_PAWN/skeleton</skeleton>
+												<skull>Textures/GenAvali_PAWN/skull</skull>
+										</li>
+								</graphicPaths>
 						<hairSettings>
-
+								<hasHair>false</hasHair><!--We might be able to add in head crests at some point.-->
 						</hairSettings>
-						<thoughtSettings>
-
-						</thoughtSettings>
-						<relationSettings>
-
-						</relationSettings>
-						<raceRestriction>
-
-						</raceRestriction>
+						<!--<thoughtSettings>
+								If there's a thought about eating chocolate we'd probably put it here about how 'that was great but wow does my tummy hurt'
+						</thoughtSettings>-->
+						<!--<relationSettings>
+								I think if we leave this empty it does normal game settings, if not I'll touch it some to see what I can do.
+						</relationSettings>-->
+						<!--<raceRestriction>
+								This one actually gets to stay empty until we get to work on research.
+						</raceRestriction>-->
+						<compatibility>
+								<isFlesh>true</isFlesh>
+								<isSentient>true</isSentient>
+								<hasBlood>true</hasBlood>
+						</compatibility>
 					</alienRace>
 		</AlienRace.ThingDef_AlienRace>
 </Defs>
