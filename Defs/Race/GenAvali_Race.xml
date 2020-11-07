@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
 <Defs>
 
-		<!--Needed for the packmate system.-->
-  <!--<ThingDef Name="GenAvali_PawnBase" ParentName="BasePawn" Abstract="True">
+		<!--Needed for the packmate system. Keep it off for now until we work in Avali.dll
+		<ThingDef Name="GenAvali_PawnBase" ParentName="BasePawn" Abstract="True">
 				<inspectorTabs>
 						<li>Avali.ITab_Avali_Pack</li>
 				</inspectorTabs>
-		</ThingDef> -->
+		</ThingDef>-->
 		
 		
 		<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
@@ -16,49 +14,37 @@
 			<description>A small nomadic spacefaring race of feathered raptors from the frozen planet of Avalon. Reigning from either scientific, traditional, or militaristic pack ideologies.</description>
 					<alienRace>
 								<generalSettings>
-                  <!-- I can not get this to work, it just throws up errors -->
-                  <!--   <chemicalSettings>
+										<!--<chemicalSettings> Non of this works for some reason.
 												<li>
 														<chemical>Chocolate</chemical>
 														<reactions>
 																<li Class="IngestionOutcomeDoer_GiveHediff">
-																	  <hediff>FoodPoisoning</hediff>
+																		<hediff>FoodPoisoning</hediff>
 																		<severity>0.5</severity>
 																</li>
 														</reactions>
 												</li>
-										</chemicalSettings> -->
-                      
+										</chemicalSettings>-->
 										<forcedRaceTraitEntries>
 												<li>
 														<defName>Bisexual</defName>
 														<chance>30</chance>
 												</li>
-
-                      <!-- FastSleeper throws up errors, I have no Idea why -->
-                      
-                      <!--		<li>
+												<!--<li> These break things for some reason.
 														<defName>FastSleeper</defName>
 														<chance>25</chance>
-												</li> -->
-                      
-                      <!-- Xenophobic throws up errors, I have no Idea why -->
-                      
-                      <!--	<li>
+												</li>
+												<li>
 														<defName>Xenophobic</defName>
 														<chance>30</chance>
-												</li> -->
-                      
+												</li>-->
 										</forcedRaceTraitEntries>
-               <!-- I can not get this to work, it just throws up errors -->
-               <!-- <disallowedTraits>
+										<disallowedTraits>
 											<li>Pyromaniac</li>
 										</disallowedTraits>
-                  
 										<notXenophobistTowards>
-											<li>GenAvali</li>
-										</notXenophobistTowards> -->
-                  
+											<li>Avali</li>
+										</notXenophobistTowards>
 										<!--<factionRelations> This whole section will have to be added in later once we start implimenting factions.
 												<li>
 													<factions>
@@ -66,7 +52,7 @@
 													<goodwill>
 													</goodwill>
 												</li>
-										</factionRelations> -->
+										</factionRelations>-->
 										<allowHumanBios>true</allowHumanBios><!--This will stay on until we make up enough non human bios to not need this one anymore. I'd say something like 20 bios would be a good kick off point, but i'd like to hit atleast 30.-->
 										<minAgeForAdulthood>18</minAgeForAdulthood>
 										<humanRecipeImport>true</humanRecipeImport>
@@ -82,7 +68,7 @@
 												-->
 												<headOffset>(0.0, 0.0)</headOffset><!-- This one is trial and error to find what looks the best.-->
 												
-														<colorChannels><!--Very Scary color generation.-->
+														<colorChannels>
 																<li>
 																		<name>skin</name>
 																		<first Class="ColorGenerator_Options"><!--We'll use first as countershade, so their chest, bellies, faces, and underfluff will be these colors.-->
@@ -108,7 +94,7 @@
 																						</li>
 																				</options>
 																		</first>
-																		<second Class="ColorGenerator_Options">
+																		<second Class="ColorGenerator_Options"><!--This should be their accent colors.-->
 																				<options>
 																						<li>
 																									<weight>5</weight><!--Lets hope that letting them have almost any color works if not I may toss in pastels at a lower rate and even some other colors I see from images online.-->
@@ -120,26 +106,25 @@
 																</li>
 														</colorChannels>
 														
-														<bodyAddons>
+														<!--<bodyAddons>
 																<li>
 																		<path>Textures/GenAvali_PAWN/Tails/</path>
-																		<bodyPart>Tail</bodyPart>
-                                    <inFrontOfBody>false</inFrontOfBody>
+																		<bodyPart>Tail</bodyPart> This part here causes an error if you don't have a biology file for your pawns yet.
+																		<isFrontofBody>false</isFrontofBody>
 																		<layerOffset>0.00</layerOffset>
 																		<angle>0</angle>
 																		<drawSize>(1.0, 1.0)</drawSize>
 																		<drawnInBed>false</drawnInBed>
 																		<colorChannel>skin</colorChannel>
-																				<!--Keeping This turned off until we get to that point.
-																				<hediffGraphics>
+																				
+																				<hediffGraphics> Keeping This turned off until we get to that point.
 																					<ProstClothTail>Textures/GenAvali_PAWN/Tails/ProstCloth</ProstClothTail>
 																					<ProstWoodTail>Textures/GenAvali_PAWN/Tails/ProstWood</ProstWoodTail>
 																					<AugTail>Textures/GenAvali_PAWN/Tails/AugTail</AugTail>
 																				</hediffGraphics>
-																				-->
+																				
 																</li>
-														</bodyAddons>
-                      </alienPartGenerator>
+														</bodyAddons>-->
 								</generalSettings>
 								<graphicPaths>
 										<li>
@@ -150,7 +135,7 @@
 										</li>
 								</graphicPaths>
 						<hairSettings>
-								<hasHair>false</hasHair><!--We might be able to add in head crests at some point.-->
+								<HasHair>false</HasHair><!--We might be able to add in head crests at some point.-->
 						</hairSettings>
 						<!--<thoughtSettings>
 								If there's a thought about eating chocolate we'd probably put it here about how 'that was great but wow does my tummy hurt'
